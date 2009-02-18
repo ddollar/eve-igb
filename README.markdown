@@ -8,22 +8,22 @@ IGB Detection
 
 Example 1:
 
-  respond_to :html, :xml, :eve
+    respond_to :html, :xml, :eve
   
 Example 2:
 
-  respond_to do |wants|
-    wants.html
-    wants.xml
-    wants.eve
-  end
+    respond_to do |wants|
+      wants.html
+      wants.xml
+      wants.eve
+    end
 
 The new "eve" view type will work with or without a block passed to it. If there is no block passed, it
-will search for a .reve file similar to the .rhtml and .rxml files for the html and xml types.
+will search for eg. index.eve.erb or show.eve.haml
 
 IGB Trust Mechanisms
 --------------------
 
 Example:
 
-  before_filter :eve_trust_required
+    before_filter :eve_trust_required
